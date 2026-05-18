@@ -140,6 +140,9 @@ const KanjiSetDictionary = memo(function KanjiSetDictionary({
                           className={clsx(
                             'flex h-6 w-6 items-center justify-center rounded-full bg-(--card-color) text-(--main-color)',
                             'transition-colors duration-200',
+                            pronunciationEnabled &&
+                              pronunciation.trim() &&
+                              'hover:cursor-pointer md:hover:bg-(--main-color)/15',
                             (!pronunciationEnabled || !pronunciation.trim()) &&
                               'cursor-not-allowed opacity-70',
                           )}
@@ -208,6 +211,9 @@ const KanjiSetDictionary = memo(function KanjiSetDictionary({
                           className={clsx(
                             'flex h-6 w-6 items-center justify-center rounded-full bg-(--card-color) text-(--main-color)',
                             'transition-colors duration-200',
+                            pronunciationEnabled &&
+                              pronunciation.trim() &&
+                              'hover:cursor-pointer md:hover:bg-(--main-color)/15',
                             (!pronunciationEnabled || !pronunciation.trim()) &&
                               'cursor-not-allowed opacity-70',
                           )}
